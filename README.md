@@ -162,55 +162,55 @@ Inserting
 ---------------------------------
 
 ```javascript
-    var Books = database.Tables('books');
-    Books.insert({name:'You Don’t Know JS: Up & Going', author:'Someone', published: true}, function(err, res){
-        // TODO: ...
-    });
+var Books = database.Tables('books');
+Books.insert({name:'You Don’t Know JS: Up & Going', author:'Someone', published: true}, function(err, res){
+    // TODO: ...
+});
 ```
 
 Updating
 ---------------------------------
 
 ```javascript
-    var Books = database.Tables('books');
-    Books.update({name:'You Don’t Know JS: Up & Going'}, 'id=1', function(err, res){
-        // TODO: ...
-    });
-    Books.update({id:1, name:'You Don’t Know JS: Up & Going'}, function(err, res){
-        // TODO: ...
-    });
+var Books = database.Tables('books');
+Books.update({name:'You Don’t Know JS: Up & Going'}, 'id=1', function(err, res){
+    // TODO: ...
+});
+Books.update({id:1, name:'You Don’t Know JS: Up & Going'}, function(err, res){
+    // TODO: ...
+});
 ```
 
 Query collections
 ---------------------------------
 
 ```javascript
-    var Books = database.Tables('books');
-    Books.select({}, function(err, rows){
-        // TODO: ...
-    });
+var Books = database.Tables('books');
+Books.select({}, function(err, rows){
+    // TODO: ...
+});
 ```
 The `select` supports the following fields:
 
 ```javascript
-   {
-       columns:'', // default '*'
-       where:'',   // default empty
-       group:'',   // default empty
-       having:'',  // default empty
-       order:'',   // default empty
-       limit:0,    // default empty
-       offset: 0   // default empty
-   }
+{
+   columns:'', // default '*'
+   where:'',   // default empty
+   group:'',   // default empty
+   having:'',  // default empty
+   order:'',   // default empty
+   limit:0,    // default empty
+   offset: 0   // default empty
+}
 ```
 
 Deleting
 ---------------------------------
 ```javascript
-    var Books = database.Tables('books');
-    Books.delete('id=1', function(err, res){
-        // TODO: ...
-    });
+var Books = database.Tables('books');
+Books.delete('id=1', function(err, res){
+    // TODO: ...
+});
 ```
 Bugs and Contributions
 ======================
