@@ -1,7 +1,7 @@
 SimpleORM.js
 ==============
 
-`SimpleORM.js` is an asynchronous Javascript object-relational mapper library.
+`SimpleORM.js` is an asynchronous Javascript object-relational mapper library for WwbSQL.
 It can be used in the web browser and on the Cordova applications with [Cordova-sqlite-storage](https://github.com/litehelpers/Cordova-sqlite-storage).
 It currently supports [HTML5 WebSQL database](http://dev.w3.org/html5/webdatabase/), a somewhat controversial part of HTML5 that is supported in Webkit
 browsers, specifically on mobile devices, including iPhone, Android and Palm's WebOS.
@@ -26,7 +26,7 @@ Setting up
 * Using `bower`:
 
 ```shell
-bower install <url>
+bower install https://github.com/Mirodil/SimpleORM.js.git
 ```
 
 Add a `<script>` to your `index.html`:
@@ -37,7 +37,7 @@ Add a `<script>` to your `index.html`:
 
 * Using directly from source:
 
-    git clone git://github.com/mirodil/simpleormjs.git
+    git clone git@github.com:Mirodil/SimpleORM.js.git
 
 Copy directories you will need following almost the same instructions above.
 
