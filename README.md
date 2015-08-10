@@ -62,21 +62,21 @@ database.addTable(BookSchema);
 
 // the first argument is define whether recreate database tables or not
 database.up(true, function(err){
-if(err)
-return console.log(err);
-
-var Books = database.Tables('books');
-
-Books.insert({name:'You Don’t Know JS: Up & Going', author:'Someone', published: true});
-Books.update({id:1, name:'You Don’t Know JS: Up & Going'});
-
-Books.select({}, function(err, books){
-console.table(books);
-
-books.forEach(function(book){
-Books.delate(book.id);
-});
-});
+    if(err)
+        return console.log(err);
+    
+    var Books = database.Tables('books');
+    
+    Books.insert({name:'You Don’t Know JS: Up & Going', author:'Someone', published: true});
+    Books.update({id:1, name:'You Don’t Know JS: Up & Going'});
+    
+    Books.select({}, function(err, books){
+        console.table(books);
+        
+        books.forEach(function(book){
+            Books.delate(book.id);
+        });
+    });
 
 });
 ```
@@ -97,41 +97,41 @@ Example use:
 ```javascript
 
 var BookSchema = Database.Table({
-/**
-* table name for creating and accessing to the table
-*/
-name:'books', 
-columns:{ 
-/**
-* this will create `id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE`
-*/
-id:{
-type: 'INTEGER', //Number
-primaryKey: true,
-allowNull: false,
-unique:true,
-autoinc:true
-},
-/**
-* this wil create `name NVARCHAR(100)`
-*/
-name:{
-type: 'NVARCHAR(100)'
-},
-/**
-* this will create `published BOOL`
-*/
-published:{
-type: 'BOOL',
-},
-/**
-* this will create `created DATETIME DEFAULT CURRENT_TIMESTAMP`
-*/
-created:{
-type:'DATETIME',
-default: 'CURRENT_TIMESTAMP'
-}
-}
+    /**
+    * table name for creating and accessing to the table
+    */
+    name:'books', 
+    columns:{ 
+        /**
+        * this will create `id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE`
+        */
+        id:{
+            type: 'INTEGER', //Number
+            primaryKey: true,
+            allowNull: false,
+            unique:true,
+            autoinc:true
+        },
+        /**
+        * this wil create `name NVARCHAR(100)`
+        */
+        name:{
+            type: 'NVARCHAR(100)'
+        },
+        /**
+        * this will create `published BOOL`
+        */
+        published:{
+            type: 'BOOL',
+        },
+        /**
+        * this will create `created DATETIME DEFAULT CURRENT_TIMESTAMP`
+        */
+        created:{
+            type:'DATETIME',
+            default: 'CURRENT_TIMESTAMP'
+        }
+    }
 });
 
 ```
@@ -146,12 +146,12 @@ The columns support the following fields:
 
 ```javascript
 { 
-type: 'INTEGER', 
-primaryKey: true, 
-allowNull: false, 
-unique:true, 
-autoinc:true, 
-default:[CURRENT_DATE|CURRENT_TIME|CURRENT_TIMESTAMP|<any>]
+    type: 'INTEGER', 
+    primaryKey: true, 
+    allowNull: false, 
+    unique:true, 
+    autoinc:true, 
+    default:[CURRENT_DATE|CURRENT_TIME|CURRENT_TIMESTAMP|<any>]
 }
 ```
 
@@ -164,7 +164,7 @@ Inserting
 ```javascript
     var Books = database.Tables('books');
     Books.insert({name:'You Don’t Know JS: Up & Going', author:'Someone', published: true}, function(err, res){
-    // TODO: ...
+        // TODO: ...
     });
 ```
 
@@ -215,7 +215,7 @@ Deleting
 Bugs and Contributions
 ======================
 
-If you find a bug, please [report it](https://github.com/zefhemel/persistencejs/issues). or fork the
+If you find a bug, please [report it](https://github.com/Mirodil/SimpleORM.js/issues). or fork the
 project, fix the problem and send me a pull request.
 
 For support and discussion, please drop me an email.
