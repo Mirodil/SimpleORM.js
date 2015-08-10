@@ -1,0 +1,23 @@
+{
+  "name": "simpleorm.js",
+  "version": "0.5.6",
+  "author": "Mirodil <mirodil007@gmail.com>",
+  "scripts": {
+    "test": ""
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "description": "orm.js is an asynchronous Javascript object-relational mapper library",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "debowerify": "^1.3.1",
+    "gulp": "*",
+    "gulp-browserify": "*",
+    "gulp-concat": "*"
+  }
+}
